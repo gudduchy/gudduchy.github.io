@@ -251,23 +251,7 @@ header .navbar ul li a:hover {
     width: 100%;
   }
 
-  .education .box-container .box:hover{
-    background-color: rgb(16, 7, 139);
-  }
-/* .education .box-container .box span {
-    font-size: 1.3rem;
-    background: #222;
-    color: #fff;
-    border-radius: 5rem;
-    padding: 0.5rem 2.5rem;
-} */
-
-/* .education .box-container .box h3 {
-    font-size: 2rem;
-    color: #fff;
-    padding-top: 1.5rem;
-} */
-
+ 
 /* .education .box-container .box p {
     font-size: 1.4rem;
     color: #eee;
@@ -277,7 +261,7 @@ header .navbar ul li a:hover {
 
 
 /* ------------- */
-.portfolio .box-container {
+/* .portfolio .box-container {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -302,8 +286,86 @@ header .navbar ul li a:hover {
 
 .portfolio .box-container .box:hover img {
     transform: scale(1.2);
+} */
+
+.portfolio .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    grid-gap: 2rem;
+    grid-gap: 2rem;
+    gap: 4rem;
+    padding: 0 4rem;
 }
 
+.portfolio .box-container .box {
+    height: 30rem;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+    position: relative;
+    border: 1rem solid transparent;
+}
+
+.portfolio .box-container .box img {
+    height: 20rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.portfolio .box-container .box .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20rem;
+    width: 100%;
+    background: var(--bg-color);
+    display: grid;
+    place-items: center;
+    transform: scale(0);
+}
+
+.portfolio .box-container .box:hover .content {
+    transform: scale(1);
+}
+
+.portfolio .box-container .box .content h3 {
+    font-size: 2.5rem;
+    color: white;
+    text-transform: uppercase;
+    transform: translateY(-5rem);
+    opacity: 0;
+    transition-delay: 0.3s;
+}
+
+.portfolio .box-container .box:hover .content h3 {
+    transform: translateY(0rem);
+    opacity: 1;
+}
+
+.icons-git {
+    cursor: pointer !important;
+    height: 40px;
+    width: 40px;
+}
+
+.icons-git img {
+    color: rgb(5, 89, 158);
+}
+
+.newDiv {
+    height: 10rem;
+    width: 100%;
+}
+
+.newDiv > h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: white;
+    text-transform: uppercase;
+    padding: 1rem 1rem;
+
+}
+/* --------- */
 .contact .row {
     display: flex;
     align-items: center;
